@@ -21,26 +21,23 @@
             padding: 20px 0;
             text-align: center;
             position: relative;
-            /* To position the logo */
         }
 
         .logo {
             position: absolute;
-            /* Positioning the logo */
             left: 20px;
-            /* Distance from the left */
             top: 8px;
-            /* Distance from the top */
             width: 80px;
-            /* Adjust size as needed */
+            max-width: 100%;
+            height: auto;
         }
 
         .wifiLogo {
-
-            position: absolute;
-            right: 6px;
-            top: 400px;
-            width: 250px;
+            position: static;
+            display: block;
+            margin: 20px auto;
+            max-width: 250px;
+            width: 100%;
         }
 
         .container {
@@ -52,41 +49,18 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .container-leftSide {
-            max-width: 200px;
-            float: left;
-            margin: 2em auto;
-            padding: 20px;
-            width: 67%;
-            padding-right: 2em;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-        }
-
         .laptopLogo {
-            position: absolute;
-            right: 250px;
-            top: 1400px;
-            width: 300px;
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            width: 100%;
         }
 
-        .vsCode {
-            position: absolute;
-            top: 1780px;
-        }
-
-        .java {
-            position: absolute;
-            top: 1778px;
-            left: 460px;
-        }
-
-        .postgres {
-            position: absolute;
-            top: 1795px;
-            left: 570px;
+        .vsCode, .java, .postgres {
+           
+            position: static;
+            display: inline-block;
+           
         }
 
         h1 {
@@ -97,15 +71,9 @@
             color: #444;
         }
 
-        aside {
-            float: right;
-            width: 30%;
-            padding-left: 2em;
-        }
-
-        aside img {
-            width: 100%;
-            border-radius: 8px;
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         ul {
@@ -144,33 +112,51 @@
             bottom: 0;
             width: 100%;
         }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 1em auto;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .logo {
+                position: static;
+                display: block;
+                margin: 0 auto 10px;
+            }
+
+            header {
+                padding: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <!-- Added logo to the header -->
-        <!-- <img src="javaLogo.png" -->
-            <!-- alt="Java Logo" class="logo" style="width: 350px; height: 190px; filter: brightness(0) invert(1);"> -->
-
         <h1>Java Programming Course</h1>
         <p>Learn Java programming concepts!</p>
     </header>
-    <!-- <div class="container-leftSide">
-
-        <h3>Guided by:</h3>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Sachin Ghait</strong></p>
-
-    </div> -->
 
     <div class="container">
-
-        </h1>
         <h2>Course Structure</h2>
         <p>This course will span over <strong>2 months </strong> and will include <strong>16 sessions</strong> covering
-            various topics in Java
-            programming.</p>
+            various topics in Java programming.</p>
 
         <h2>Course Topics</h2>
         <ol>
@@ -184,21 +170,18 @@
             <li>Lists</li>
             <li>Strings</li>
             <li>Project</li>
-
         </ol>
         <img src="WifiLogo.png" alt="Java WifiLogo" class="wifiLogo">
 
-        <img src="How-to-Start-Learning-Java.png" alt="Java Learning Image" style="width: 100%; height: auto;">
-        <!-- <img src="5-Important-tips-to-learn-Java-faster.webp" alt="Java Learning Image" style="width: 100%; height: auto;"> -->
+        <img src="How-to-Start-Learning-Java.png" alt="Java Learning Image">
 
         <h2>Schedule</h2>
         <p><strong>Days:</strong> Saturday - Sunday</p>
         <p><strong>Duration:</strong> Each session lasts for <strong>1 hour and 30 minutes</strong>.</p>
         <p><strong>Best For Practice:</strong> Laptop or Desktop </p>
-        <img src="laptopLogo.png"
-            alt="Laptop Logo" class="laptopLogo">
+        <img src="laptopLogo.png" alt="Laptop Logo" class="laptopLogo">
         <p><strong>Free WIFI</strong></p>
-        <p><Strong>Click heare: </Strong> <a href="https://c-programming-course.netlify.app" target="_blank"> C Course</a> </p>
+        <p><Strong>Click here: </Strong> <a href="https://c-programming-course.netlify.app" target="_blank"> C Course</a> </p>
 
         <h2>Fees</h2>
         <p><strong>Total Price:</strong> ₹3000</p>
@@ -206,23 +189,21 @@
         <h2>Instructor Details</h2>
         <strong>Name:</strong> Devanshu Patil<br>
         <p>Master in C and Java Programming.</p>
-        <a href="https://www.w3schools.com/c/c_intro.php" target="_blank"><img src="c-removebg-preview.png"
-                style="width: 50px; height: auto; margin-right: 10px;" alt="C logo"></a>
-        <a href="https://www.w3schools.com/java/java_intro.asp" target="_blank"><img src="javaLogo.png"
-            style="width: 130px; height: auto; margin-right: 10px;" class="java" alt="Java logo"></a>
-        <a href="https://www.postgresql.org/" target="_blank"><img src="PostgresLogo.png"
-            style="width: 50px; height: auto; margin-right: 10px;" class="postgres" alt="Postgres logo"></a>
-        <a href="https://spring.io/projects/spring-boot" target="_blank"> <img src="SpringBoot-Logo.png" style="width: 50px; height: auto; margin-right: 10px;"
-            alt="Spring Boot logo"></a>
-        <a href="https://code.visualstudio.com/docs/editor/whyvscode" target="_blank"><img src="Vs-code-Logo.png" style="width: 80px; height: auto;" class="vsCode" alt="VS Code logo"></a>
-        
-<!--         
-        <img src="vs_code-removebg-preview.png" style="width: 80px; height: auto;" class="vsCode" alt="VS Code logo"> -->
+        <div>
+            <a href="https://www.w3schools.com/c/c_intro.php" target="_blank"><img src="c-removebg-preview.png"
+                    style="width: 50px; height: auto; margin-right: 10px;" alt="C logo"></a>
+            <a href="https://www.w3schools.com/java/java_intro.asp" target="_blank"><img src="javaLogo.png"
+                style="width: 130px; height: auto; margin-right: 10px;" class="java" alt="Java logo"></a>
+            <a href="https://www.postgresql.org/" target="_blank"><img src="PostgresLogo.png"
+                style="width: 50px; height: auto; margin-right: 10px;" class="postgres" alt="Postgres logo"></a>
+                <a href="https://spring.io/projects/spring-boot" target="_blank"> <img src="SpringBoot-Logo.png" style="width: 50px; height: auto; margin-right: 10px;"
+                    alt="Spring Boot logo"></a>
+            <a href="https://code.visualstudio.com/docs/editor/whyvscode" target="_blank"><img src="Vs-code-Logo.png" style="width: 80px; height: auto;" class="vsCode" alt="VS Code logo"></a>
+        </div>
 
         <h4>My Projects</h4>
         <ul>
-            <li><a href="https://github.com/devanshupatil/UDP-Chat-Application" target="_blank">UDP-Chat-Application</a>
-            </li>
+            <li><a href="https://github.com/devanshupatil/UDP-Chat-Application" target="_blank">UDP-Chat-Application</a></li>
             <li><a href="https://github.com/devanshupatil/Clipboard-Sync" target="_blank">Clipboard-Sync</a></li>
             <li><a href="https://github.com/devanshupatil/cleanyt" target="_blank">cleanyt</a></li>
             <li><a href="https://fool-quiz.netlify.app/" target="_blank">Quiz-Game</a></li>
