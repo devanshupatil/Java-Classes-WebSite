@@ -233,9 +233,21 @@
     </div>
 
     <footer>
+        
         &copy; 2024 Java Programming Course. All rights reserved.
+        <p>Page Views: <span id="view-count">0</span></p>
     </footer>
 
+    <script>
+        // Simulate view count increment
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewCountElement = document.getElementById('view-count');
+            let viewCount = parseInt(localStorage.getItem('viewCount')) || 0;
+            viewCount++;
+            localStorage.setItem('viewCount', viewCount);
+            viewCountElement.textContent = viewCount;
+        });
+    </script>
 </body>
 
 </html>
